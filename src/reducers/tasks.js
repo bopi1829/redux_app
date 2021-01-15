@@ -9,8 +9,11 @@ import { ADD_TASK, DEL_TASK } from "../actions/tasks";
  * @param {*} action 
  */
 
-function tasks(state = [], action) {
+let tasksId = 0;
 
+export default function tasks(state = [], action) {
+
+    // eslint-disable-next-line default-case
     switch(action.type) {
         case ADD_TASK:
            /*state.push(
@@ -24,7 +27,7 @@ function tasks(state = [], action) {
             return [
                 ...state,
                 {
-                    id: 0,
+                    id: tasksId++,
                     text: action.text,
                     deleted: false
                 }
@@ -34,12 +37,14 @@ function tasks(state = [], action) {
             // parcourir le state ([])
             // checher index
             // deleted: true
-            state.map((task, index) => {
+            return state.map((task, index) => {
                 if(index === action.index) {
                     task.deleted = true;
                 }
                 return task;
             })
             //
+            default:
+                return state
     }
 }
