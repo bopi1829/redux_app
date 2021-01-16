@@ -1,0 +1,11 @@
+{
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.autoClosingOvertype": "always",
+    "editor.tabCompletion": "on",
+    "editor.minimap.maxColumn": 80,
+    "files.insertFinalNewline": true,
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true
+}

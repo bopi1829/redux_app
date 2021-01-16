@@ -1,18 +1,20 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-import {createStore} from 'redux';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import tasksApp from './reducers'
 import { addTask, delTask, setVisibilityFilter, VisbilityFilters } from './actions/tasks';
 
 const store = createStore(tasksApp)
-console.log("Initial state redux : ", store.getState())
 
+console.log("Initial state redux : ", store.getState())
 const unsubscribe = store.subscribe(() => console.log(store.getState()))
 
+/*
 store.dispatch(addTask("Ma première tache"))
 store.dispatch(addTask("Allez faire des courses"))
 store.dispatch(addTask("Allez se baigner"))
@@ -24,11 +26,12 @@ store.dispatch(setVisibilityFilter(VisbilityFilters.SHOW_ALL))
 store.dispatch(setVisibilityFilter(VisbilityFilters.SHOW_DELETED))
 
 unsubscribe();
+*/
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store = { store }>
+    <App />    
+  </Provider>,
   document.getElementById('root')
 );
 
