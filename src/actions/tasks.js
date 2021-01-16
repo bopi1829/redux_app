@@ -9,8 +9,9 @@ export const SET_VISIBILITY_FILTER = "SET_VISIBILITY_FILTER";
 export const VisbilityFilters = {
     SHOW_ALL: "SHOW_ALL",
     SHOW_DELETED: "SHOW_DELETED",
-    SHOW_ACTIVE: "SHOW_ACTIVE"
+    SHOW_ACTIVE: "SHOW_ACTIVE",
 }
+
 /**
  * 
  * @param {*} text 

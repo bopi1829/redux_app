@@ -1,11 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import AddTask from './containers/AddTasks';
+
+import AddTasks from './containers/AddTasks';
+import VisibleTaskList from './containers/VisibleTaskList';
+import Footer from './components/footer';
 
 function App() {
   return (
     <div className = "App">
-      <AddTask />
+      <VisibleTaskList />
+      <AddTasks />
+      <Footer />
       <header className = "App-header">
         <img src = {logo} className = "App-logo" alt = "logo" />
         <p>

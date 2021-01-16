@@ -9,20 +9,16 @@ let AddTask = ({ dispatch }) => {
             <form 
                 onSubmit = { e => {
                     e.preventDefault()
-                    // eslint-disable-next-line no-undef
                     if(!input.value.trim()) {
                         return;
                     }
-                    // eslint-disable-next-line no-undef
                     dispatch(addTask(input.value))
-                    // eslint-disable-next-line no-undef
                     input.value = '';
                     // DISPATCH ADDTASKS
                 }}
                 >
                 <input
                     ref = { node => {
-                        // eslint-disable-next-line no-undef
                         input = node
                     }}
                 />

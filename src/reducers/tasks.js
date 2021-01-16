@@ -9,9 +9,9 @@ import { ADD_TASK, DEL_TASK } from "../actions/tasks";
  * @param {*} action 
  */
 
-let tasksId = 0;
+let taksId = 0;
 
-export default function tasks(state = [], action) {
+function tasks(state = [], action) {
 
     // eslint-disable-next-line default-case
     switch(action.type) {
@@ -27,7 +27,7 @@ export default function tasks(state = [], action) {
             return [
                 ...state,
                 {
-                    id: tasksId++,
+                    id: taksId++,
                     text: action.text,
                     deleted: false
                 }
@@ -48,3 +48,5 @@ export default function tasks(state = [], action) {
                 return state
     }
 }
+
+export default tasks;
